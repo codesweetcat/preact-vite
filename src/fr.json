@@ -1,0 +1,10 @@
+{
+  "news": {
+    "title": "Nouvelles du Monde",
+    "totalStories": {
+      "none": "Aucun article",
+      "one": "Un article",
+      "many": "{{count}} articles"
+    }
+  }
+}

@@ -7,5 +7,9 @@ import App from '/@/app'
 const el = document.getElementById('app')
 
 if (el) {
-  render(<App />, el)
+  render(
+    <App />,
+
+    el
+  )
 }

@@ -1,9 +1,19 @@
 import { h } from 'preact'
-
+import { IntlProvider } from 'preact-i18n'
+import definition from './fr.json'
+import { Text } from 'preact-i18n'
 export default function App() {
+  // Const _IntlProvider = IntlProvider as any
+
   return (
     <div className="mx-auto my-8 mt-10 w-8/12 rounded border border-gray-200 p-4 shadow-md dark:border-neutral-600 dark:bg-neutral-800 dark:shadow-none">
       <h1 className="mb-4 text-4xl">Welcome</h1>
+      <h1>
+        <IntlProvider definition={definition || {}}>
+          {/* Default fallback text example: */}
+          <Text id="news.title">World News</Text>
+        </IntlProvider>
+      </h1>
       <p className="my-4">
         <em>Minimal, fast, sensible defaults.</em>
       </p>
@@ -38,5 +48,6 @@ export default function App() {
         for live updates.
       </p>
     </div>
+    // </_IntlProvider>
   )
 }

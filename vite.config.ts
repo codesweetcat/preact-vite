@@ -11,7 +11,13 @@ const config: UserConfig = {
     factory: 'h',
     fragment: 'Fragment',
   },
+  optimizeDeps: {
+    include: ['preact-i18n'],
+    needsInterop: ['preact-i18n'],
+  },
+
   plugins: [preactRefresh()],
+
   port: 8000,
 }
 
